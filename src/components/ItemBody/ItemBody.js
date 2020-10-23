@@ -28,11 +28,11 @@ export const ItemBody = React.memo((props) => {
   }
   */
 
-  return <div className="ItemBody">
-    <section>
+  return <div className="itemBody">
+    <section className="itemSection">
       <ItemSection items={props.items} selectedItem={state.selectedItem} openItem={openItem}/>
     </section>
-    <aside> 
+    <aside className="itemContainer"> 
       <ItemContainer item={state.selectedData}/>
     </aside>
   </div>;

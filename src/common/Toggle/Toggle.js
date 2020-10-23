@@ -3,8 +3,8 @@ import PropTypes from "prop-types";
 import "./Toggle.css";
 
 export const Toggle = React.memo((props) => {
-  const { value } = props;
-  return <input type="checkbox" selected={value} />;
+  const { value, id } = props;
+  return <input type="checkbox" selected={value} id={id} />;
 });
 
 Toggle.propTypes = {

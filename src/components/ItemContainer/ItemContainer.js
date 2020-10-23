@@ -9,29 +9,29 @@ import "./ItemContainer.css";
 export const ItemContainer = React.memo((props) => {
   const fields = props.item || [];
   return (
-    <div className="ItemContainer">
+    <div className="itemInnerContainer">
       {fields.map((item) =>
         item.fieldType === "toggle" ? (
-          <div>
-            <Toggle value={item.fieldValue} />
-            <Label value={item.fieldName} />
+          <div className="itemContent">
+            <Toggle value={item.fieldValue} id={item.id}/>
+            <Label value={item.fieldName} id={item.id}/>
           </div>
         ) : item.fieldType === "text" ? (
-          <div>
+          <div className="itemContent">
             <div>
-              <Label value={item.fieldName} />
+              <Label value={item.fieldName} id={item.id}/>
             </div>
             <div>
-              <Text value={item.fieldValue} />
+              <Text value={item.fieldValue} id={item.id}/>
             </div>
           </div>
         ) : (
-          <div>
+          <div className="itemContent">
             <div>
-              <Label value={item.fieldName} />
+              <Label value={item.fieldName} id={item.id}/>
             </div>
             <div>
-              <Option value={item.fieldValue} options={item.fieldOptions} />
+              <Option value={item.fieldValue} options={item.fieldOptions} id={item.id} />
             </div>
           </div>
         )

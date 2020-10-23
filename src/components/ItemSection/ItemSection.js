@@ -4,7 +4,7 @@ import "./ItemSection.css";
 
 export const ItemSection = React.memo((props) => {
   return (
-    <div className="ItemSection">
+    <div className="itemInnerSection">
       <ul>
         {props.items.map((item) => (
           <li

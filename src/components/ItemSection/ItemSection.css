@@ -1,0 +1,23 @@
+.itemInnerSection{
+    margin: 0;
+}
+
+.itemInnerSection ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.itemInnerSection ul li{
+    padding: 10px 20px;
+    background-color: grey;
+    margin: 10px 0 10px 0;
+    border-radius: 5px;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.itemInnerSection ul li.selected{
+    background-color: #f5f6f7;
+    color: #000000;
+}

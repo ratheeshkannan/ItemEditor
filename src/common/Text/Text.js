@@ -4,8 +4,11 @@ import "./Text.css";
 
 export const Text = React.memo((props) => {
   const { value, id } = props;
+  const onChange = function(e){
+    return true;
+  }
   return (
-    <input type="text" value={value} id={id} />
+    <input type="text" value={value} id={id} onChange={onChange}/>
   );
 });
 
