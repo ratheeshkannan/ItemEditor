@@ -1,0 +1,16 @@
+.itemHeader{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-color: grey;
+}
+.heading{
+    justify-content: flex-start;
+    flex-grow: 3;
+    font-size: 18px;
+    margin: 10px;
+}
+.buttonsContainer{
+    justify-content: flex-start;
+    display: flex;
+}

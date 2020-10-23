@@ -1,0 +1,8 @@
+.ActionButtons{
+   margin: 10px; 
+   display: flex;
+   flex-direction: row;
+}
+.button{
+    margin: 5px;
+}

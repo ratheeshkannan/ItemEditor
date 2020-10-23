@@ -1,14 +1,34 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import { ItemEditor } from "./ItemEditor";
+import * as serviceWorker from "./serviceWorker";
+import { Title } from "./constants";
+
+const onSave = function (e) {
+  alert("Save");
+};
+
+const items = [{
+  id: '1',
+  name: 'first',
+  fields: [{
+    id: '1',
+    fieldName: 'name',
+    fieldType: 'text',
+    fieldValue: 'value',
+    fieldOptions: [{
+      optionName: 'option name',
+      optionValue: 0,
+    }]
+  }]
+}];
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ItemEditor onSave={onSave} title={Title} items={items}/>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 
 // If you want your app to work offline and load faster, you can change
