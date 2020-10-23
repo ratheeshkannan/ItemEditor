@@ -7,8 +7,8 @@ import "./ItemEditor.css";
 export const ItemEditor = React.memo((props) => {
   return (
     <div className="ItemEditor">
-      <ItemHeader onSave={props.onSave} />
-      <ItemBody items={props.items}/>
+      <ItemHeader onSave={props.onSave} title={props.title}/>
+      <ItemBody items={props.items} />
     </div>
   );
 });
@@ -28,6 +28,12 @@ ItemEditor.propTypes = {
             PropTypes.number,
             PropTypes.bool,
           ]),
+          fieldOptions: PropTypes.arrayOf(
+            PropTypes.shape({
+              optionName: PropTypes.string,
+              optionValue: PropTypes.number,
+            })
+          ),
         })
       ),
     })

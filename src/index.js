@@ -4,29 +4,15 @@ import "./index.css";
 import { ItemEditor } from "./ItemEditor";
 import * as serviceWorker from "./serviceWorker";
 import { Title } from "./constants";
+import { Mock } from "./mock/Mock"
 
 const onSave = function (e) {
   alert("Save");
 };
 
-const items = [{
-  id: '1',
-  name: 'first',
-  fields: [{
-    id: '1',
-    fieldName: 'name',
-    fieldType: 'text',
-    fieldValue: 'value',
-    fieldOptions: [{
-      optionName: 'option name',
-      optionValue: 0,
-    }]
-  }]
-}];
-
 ReactDOM.render(
   <React.StrictMode>
-    <ItemEditor onSave={onSave} title={Title} items={items}/>
+    <ItemEditor onSave={onSave} title={Title} items={Mock}/>
   </React.StrictMode>,
   document.getElementById("root")
 );

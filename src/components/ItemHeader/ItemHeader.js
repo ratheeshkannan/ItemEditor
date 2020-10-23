@@ -35,7 +35,7 @@ export const ItemHeader = React.memo((props) => {
 
   return (
     <header className="itemHeader">
-      <h1 className="heading">Item Editor</h1>
+      <h1 className="heading">{props.title}</h1>
       <section className="buttonsContainer">
         <ActionButtons settings={undoRedoButtonSettings} />
         <ActionButtons settings={saveCancelButtonSettings} />
@@ -46,4 +46,5 @@ export const ItemHeader = React.memo((props) => {
 
 ItemHeader.propTypes = {
     onSave: PropTypes.func,
+    title: PropTypes.string,
 }
