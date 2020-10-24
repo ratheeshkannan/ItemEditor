@@ -6,12 +6,14 @@ export const ItemSection = React.memo((props) => {
   return (
     <div className="itemInnerSection">
       <ul>
-        {props.items.map((item) => (
+        {props.items.map((item, index) => (
           <li
             id={item.id}
             onClick={props.openItem}
-            className={item.id === props.selectedItem ? "selected" : ""}
-            key={item.id}
+            className={
+              item.id === props.items[props.selectedIndex].id ? "selected" : ""
+            }
+            key={index}
           >
             {item.name}
           </li>

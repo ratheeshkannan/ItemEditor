@@ -6,13 +6,9 @@ import * as serviceWorker from "./serviceWorker";
 import { Title } from "./constants";
 import { Mock } from "./mock/Mock"
 
-const onSave = function (e) {
-  alert("Save");
-};
-
 ReactDOM.render(
   <React.StrictMode>
-    <ItemEditor onSave={onSave} title={Title} items={Mock}/>
+    <ItemEditor title={Title} items={Mock}/>
   </React.StrictMode>,
   document.getElementById("root")
 );

@@ -7,31 +7,32 @@ import { Option } from "../../common/Option";
 import "./ItemContainer.css";
 
 export const ItemContainer = React.memo((props) => {
-  const fields = props.item || [];
+  const fields = props.item.fields || [];
+
   return (
     <div className="itemInnerContainer">
-      {fields.map((item) =>
+      {fields.map((item, index) =>
         item.fieldType === "toggle" ? (
-          <div className="itemContent">
-            <Toggle value={item.fieldValue} id={item.id}/>
+          <div className="itemContent" key={index}>
+            <Toggle value={item.fieldValue} id={item.id} onChange={props.onChange}/>
             <Label value={item.fieldName} id={item.id}/>
           </div>
         ) : item.fieldType === "text" ? (
-          <div className="itemContent">
+          <div className="itemContent" key={index}>
             <div>
               <Label value={item.fieldName} id={item.id}/>
             </div>
             <div>
-              <Text value={item.fieldValue} id={item.id}/>
+              <Text value={item.fieldValue} id={item.id} onChange={props.onChange}/>
             </div>
           </div>
         ) : (
-          <div className="itemContent">
+          <div className="itemContent" key={index}>
             <div>
               <Label value={item.fieldName} id={item.id}/>
             </div>
             <div>
-              <Option value={item.fieldValue} options={item.fieldOptions} id={item.id} />
+              <Option value={item.fieldValue} options={item.fieldOptions} id={item.id} onChange={props.onChange}/>
             </div>
           </div>
         )

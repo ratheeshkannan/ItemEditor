@@ -3,11 +3,11 @@ import PropTypes from "prop-types";
 import "./Option.css";
 
 export const Option = React.memo((props) => {
-  const { value, options, id } = props;
+  const { value, options, id, onChange } = props;
   return (
-    <select className="option" value={value} id={id}>
-      {options.map((option) => (
-        <option value={option.optionValue}> {option.optionName} </option>
+    <select className="option" value={value} id={id} onChange={onChange}>
+      {options.map((option, index) => (
+        <option value={option.optionValue} key={index}> {option.optionName} </option>
       ))}
     </select>
   );
