@@ -8,13 +8,13 @@ export const ItemHeader = React.memo((props) => {
     primary: {
       value: "Undo",
       onClick: function(e){
-          alert('Undo');
+        props.itemStore.onUndo();
       },
     },
     secondary: {
       value: "Redo",
       onClick: function(){
-          alert('Redo');
+        props.itemStore.onRedo();
       },
     },
   };
@@ -22,20 +22,19 @@ export const ItemHeader = React.memo((props) => {
       primary: {
         value:"Save",
         onClick: function(){
-            props.onSave();
+          props.itemStore.onSave();
         },
       },
       secondary: {
         value: "Cancel",
         onClick: function(){
-            alert('cancel');
+          props.itemStore.onCancel();
         }
       },
   }
 
   return (
     <header className="itemHeader">
-      <h1 className="heading">{props.title}</h1>
       <section className="buttonsContainer">
         <ActionButtons settings={undoRedoButtonSettings} />
         <ActionButtons settings={saveCancelButtonSettings} />

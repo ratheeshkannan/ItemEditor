@@ -5,22 +5,28 @@ import { ItemContainer } from "../ItemContainer";
 import "./ItemBody.css";
 
 export const ItemBody = React.memo((props) => {
+  const store = props.itemStore.getStore();
+
   return (
-    <div className="itemBody">
-      <section className="itemSection">
-        <ItemSection
-          items={props.store.items}
-          selectedIndex={props.store.selectedIndex}
-          openItem={props.openItem}
-        />
-      </section>
-      <aside className="itemContainer">
-        <ItemContainer
-          item={props.store.items[props.store.selectedIndex]}
-          onChange={props.onChange}
-        />
-      </aside>
-    </div>
+    <>
+      <div className="itemBody">
+        <nav className="itemSection">
+          <h2>{props.title}</h2>
+          <ItemSection
+            items={store.items}
+            selectedIndex={store.selectedIndex}
+            openItem={props.itemStore.openItem}
+          />
+        </nav>
+        <section className="itemContainer">
+          <ItemContainer
+            item={store.items[store.selectedIndex]}
+            onChange={props.itemStore.onChange}
+            itemStore={props.itemStore}
+          />
+        </section>
+      </div>
+    </>
   );
 });
 

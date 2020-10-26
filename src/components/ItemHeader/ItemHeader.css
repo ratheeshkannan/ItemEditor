@@ -1,18 +1,4 @@
-.itemHeader{
-    display: flex;
-    flex-direction: row;
-    background-color: grey;
-    border-radius: 5px;
-}
-.heading{
-    justify-content: flex-start;
-    flex-grow: 3;
-    font-size: 18px;
-    margin: 20px;
-    color: #ffffff;
-    font-weight: normal;
-}
 .buttonsContainer{
-    justify-content: flex-start;
     display: flex;
+    justify-content: flex-end;
 }
