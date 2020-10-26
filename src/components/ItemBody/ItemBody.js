@@ -31,5 +31,6 @@ export const ItemBody = React.memo((props) => {
 });
 
 ItemBody.propTypes = {
-  items: PropTypes.array,
+  itemStore: PropTypes.object,
+  title: PropTypes.string,
 };

@@ -14,5 +14,8 @@ export const Option = React.memo((props) => {
 });
 
 Option.propTypes = {
-  settings: PropTypes.object,
+  value: PropTypes.number,
+  options: PropTypes.array,
+  id: PropTypes.string,
+  onChange: PropTypes.func,
 };

@@ -12,4 +12,5 @@ export const Text = React.memo((props) => {
 Text.propTypes = {
   value: PropTypes.string,
   id: PropTypes.string,
+  onChange: PropTypes.func,
 };

@@ -1,7 +1,12 @@
 .button{
-    padding: 5px;
+    padding: 10px;
     border: none;
     outline: none;
     width: 100px;
     cursor: pointer;
+    color: #ffffff;
+    background-color: #4b4276;
+}
+.button:disabled{
+    background-color: grey;
 }

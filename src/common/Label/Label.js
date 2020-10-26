@@ -12,5 +12,6 @@ export const Label = React.memo((props) => {
 });
 
 Label.propTypes = {
-  settings: PropTypes.object,
+  value: PropTypes.string,
+  id: PropTypes.string,
 };

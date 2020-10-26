@@ -107,6 +107,10 @@ select {
   font-size: 0.875rem;
 }
 
+input[type="checkbox"]{
+  cursor: pointer;
+}
+
 input[type="checkbox"],
 input[type="radio"] {
   position: relative;

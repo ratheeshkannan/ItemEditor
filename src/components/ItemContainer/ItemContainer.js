@@ -61,5 +61,5 @@ export const ItemContainer = React.memo((props) => {
 });
 
 ItemContainer.propTypes = {
-  item: PropTypes.array,
+  item: PropTypes.object,
 };

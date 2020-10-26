@@ -4,9 +4,11 @@ import "./Toggle.css";
 
 export const Toggle = React.memo((props) => {
   const { value, id, onChange } = props;
-  return <input type="checkbox" selected={value} id={id} onChange={onChange} className={"toggle"}/>;
+  return <input type="checkbox" checked={!!value} id={id} onChange={onChange} className={"toggle"}/>;
 });
 
 Toggle.propTypes = {
-  settings: PropTypes.object,
+  value: PropTypes.bool,
+  id: PropTypes.string,
+  onChange: PropTypes.func,
 };
