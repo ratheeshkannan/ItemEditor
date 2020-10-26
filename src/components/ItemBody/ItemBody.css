@@ -1,0 +1,8 @@
+.itemBody {
+  display: flex;
+  position: relative;
+}
+
+.itemBody .itemContainer {
+  width: calc(100% - 200px);
+}

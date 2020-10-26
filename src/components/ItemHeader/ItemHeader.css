@@ -1,4 +1,11 @@
-.buttonsContainer{
-    display: flex;
-    justify-content: flex-end;
+.itemHeader {
+  padding: 10px;
+  background: #fff;
+  color: #717171;
+  border-bottom: 1px solid #e0e4e8;
+}
+
+.buttonsContainer {
+  display: flex;
+  justify-content: flex-end;
 }

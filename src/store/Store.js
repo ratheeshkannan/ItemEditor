@@ -2,9 +2,9 @@ import { useState } from "react";
 
 export const ItemStore = (items) => {
   const [store, setStore] = useState({
-    items: items,
-    selectedIndex: 0,
-    historyItems: {
+    items: items, //items store for storing the full application details
+    selectedIndex: 0, //to store which tab is selected
+    historyItems: { //History to store history related items
       initialitems: items,
       undo: false,
       history: 0,

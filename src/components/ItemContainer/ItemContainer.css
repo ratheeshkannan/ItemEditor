@@ -1,3 +1,14 @@
-.itemContent{
-    margin-bottom: 20px;
+.itemContent {
+  margin-bottom: 20px;
+}
+
+.itemInnerContainer {
+  width: 100%;
+  margin-left: 200px;
+}
+
+.itemInnerContainer .itemInnerContent {
+  margin: 20px;
+  color: #717171;
+  line-height: 25px;
 }

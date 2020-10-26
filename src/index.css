@@ -12,72 +12,6 @@ body {
   background-color: #f3f5f9;
 }
 
-.itemBody{
-  display: flex;
-  position: relative;
-}
-
-.itemBody .itemSection{
-  width: 200px;
-  height: 100%;
-  background: #4b4276;
-  padding: 30px 0px;
-  position: fixed;
-}
-
-.itemBody .itemSection h2{
-  color: #fff;
-  text-transform: uppercase;
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.itemBody .itemSection ul li{
-  padding: 15px;
-  border-bottom: 1px solid #bdb8d7;
-  border-bottom: 1px solid rgba(0,0,0,0.05);
-  border-top: 1px solid rgba(255,255,255,0.05);
-  color: #bdb8d7;
-  display: block;
-  cursor: pointer;
-}
-
-.itemBody .itemSection ul li.selected{
-  background-color: #594f8d;
-  color: #fff;
-}
-
-.itemBody .itemSection ul li:hover{
-  background-color: #594f8d;
-  color: #fff;
-}
-
-.itemBody .itemContainer{
-  width: calc(100% - 200px);
-}
-
-.itemBody .itemInnerContainer{
-  width: 100%;
-  margin-left: 200px;
-}
-
-.itemBody .itemInnerContainer .itemHeader{
-  padding: 10px;
-  background: #fff;
-  color: #717171;
-  border-bottom: 1px solid #e0e4e8;
-}
-
-.itemBody .itemInnerContainer .itemInnerContent{
-  margin: 20px;
-  color: #717171;
-  line-height: 25px;
-}
-
-.itemBody .itemInnerContainer .info div{
-  margin-bottom: 20px;
-}
-
 label {
   display: inline-block;
   margin-bottom: 0.5rem;
@@ -103,16 +37,9 @@ select {
   height: 34px;
 }
 
-select {
-  font-size: 0.875rem;
-}
-
-input[type="checkbox"]{
-  cursor: pointer;
-}
-
 input[type="checkbox"],
 input[type="radio"] {
+  cursor: pointer;
   position: relative;
   top: 5px;
   width: 22px;
